@@ -1,0 +1,156 @@
+.carouselSection {
+  width: 100%;
+}
+
+.carouselContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  width: 100%;
+}
+
+.carouselContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.slideTitle {
+  font-size: 1.8rem; /* Reduced font size */
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--foreground, #fff);
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.slide1 {
+  --slide-top-bg: #e2e8f0;
+  --slide-bottom-bg: #cbd5e1;
+}
+
+.slide2 {
+  --slide-top-bg: #f1f5f9;
+  --slide-bottom-bg: #e2e8f0;
+}
+
+.slide3 {
+  --slide-top-bg: #f8fafc;
+  --slide-bottom-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  .slide1 {
+    --slide-top-bg: #1c1f26;
+    --slide-bottom-bg: #14161c;
+  }
+  .slide2 {
+    --slide-top-bg: #16181d;
+    --slide-bottom-bg: #0d0f12;
+  }
+  .slide3 {
+    --slide-top-bg: #1a1d24;
+    --slide-bottom-bg: #12141a;
+  }
+}
+
+.topSection {
+  position: relative;
+  height: 25vh; /* Reduced height further */
+  min-height: 180px; /* Reduced minimum bound */
+  background-size: cover;
+  background-position: center;
+  padding: 24px 20px; /* Reduced padding */
+  background-color: var(--slide-top-bg);
+}
+
+.bottomSection {
+  padding: 24px 20px; /* Reduced padding */
+  color: var(--foreground, #fff);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--slide-bottom-bg);
+}
+
+.slideDescription {
+  font-size: 1.1rem; /* Reduced font size */
+  line-height: 1.4;
+  margin: 0 0 24px 0; /* Reduced margin */
+  font-family: serif;
+}
+
+.controlsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Reduced margin */
+}
+
+.discoverButton {
+  background: transparent;
+  color: var(--foreground, #fff);
+  border: 1px solid var(--foreground, rgba(255,255,255,0.8));
+  border-radius: 30px;
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 0.7rem; /* Reduced font size */
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.discoverButton:hover {
+  background: var(--foreground, #fff);
+  color: var(--background, #333);
+}
+
+.arrowButtons {
+  display: flex;
+  gap: 8px; /* Reduced gap */
+}
+
+.arrowBtn {
+  background: transparent;
+  color: var(--foreground, #fff);
+  border: 1px solid var(--border, rgba(255,255,255,0.8));
+  border-radius: 50%;
+  width: 32px; /* Reduced size */
+  height: 32px; /* Reduced size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.paginationRow {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(128,128,128,0.3);
+  transition: background-color 0.3s, width 0.3s;
+  cursor: pointer;
+}
+
+.activeDot {
+  background-color: var(--primary, #fff);
+  width: 24px;
+  border-radius: 4px;
+}

@@ -1,0 +1,224 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+}
+
+.headerInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.headerVisible {
+  transform: translateY(0);
+}
+
+.headerHidden {
+  transform: translateY(-100%);
+}
+
+.logo a {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--foreground);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 200; /* Above overlay */
+  position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Dramatically Expand the invisible mobile touch target */
+.hamburger::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+}
+
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--foreground);
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Hamburger to X animation */
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Overlay Navigation */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1200px;
+  right: 0;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: var(--surface);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s 0.4s;
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s 0s;
+}
+
+.overlayHeader {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.navMenu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 24px 24px; /* Reduced bottom padding to pull links down */
+}
+
+.overlayLogoText {
+  color: var(--foreground) !important;
+}
+
+.overlayHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.searchBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--foreground);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn .bar {
+  background-color: var(--foreground) !important;
+}
+
+.primaryLinks, .secondaryLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.primaryLinks {
+  gap: 24px;
+}
+
+.primaryLinks a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-nav-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.primaryLinks a:hover {
+  color: var(--primary);
+}
+
+.arrowIcon {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.secondaryLinks {
+  gap: 12px;
+}
+
+.secondaryLinks a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-nav-secondary);
+  font-size: 0.9rem;
+  color: #a0a5b1;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.secondaryLinks a:hover {
+  color: var(--foreground);
+}
+
+.arrowIconSm {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.globalText {
+  font-size: 0.95rem;
+  color: #a0a5b1;
+  font-weight: 400;
+}
