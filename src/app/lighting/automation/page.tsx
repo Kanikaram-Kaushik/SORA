@@ -1,15 +1,26 @@
 import React from 'react';
-import Footer from '@/components/Footer';
+import LightingRoutePage from '@/components/LightingRoutePage';
 
 export default function LightingAutomationPage() {
   return (
-    <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ height: '80px' }}></div>
-      <div style={{ flex: 1, padding: '40px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '2rem', marginBottom: '16px' }}>Automation</h1>
-        <p style={{ color: '#a0a5b1' }}>Lighting automation integrations coming soon.</p>
-      </div>
-      <Footer />
-    </main>
+    <LightingRoutePage
+      eyebrow="Automation"
+      title="Connected lighting scenes and controls"
+      description="Automation brings dimming, scheduling, and smart scene behavior into the lighting system while keeping the user experience simple and calm."
+      imageSrc="/mountain_lighting.png"
+      imageAlt="Lighting automation preview"
+      primaryCtaLabel="Plan automation"
+      primaryCtaHref="/contact"
+      points={[
+        'Scene-based control for everyday routines and special moments.',
+        'App and sensor integrations that reduce friction for the user.',
+        'A system-level approach that respects the architectural intent.',
+      ]}
+      related={[
+        { title: 'Indoor', href: '/lighting/indoor', description: 'Pair automation with indoor fixture planning.' },
+        { title: 'Outdoor', href: '/lighting/outdoor', description: 'Extend smart behavior to terraces and facades.' },
+        { title: 'Services', href: '/lighting/services', description: 'Work with the team on a full system layout.' },
+      ]}
+    />
   );
 }

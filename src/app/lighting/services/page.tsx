@@ -1,15 +1,26 @@
 import React from 'react';
-import Footer from '@/components/Footer';
+import LightingRoutePage from '@/components/LightingRoutePage';
 
 export default function LightingServicesPage() {
   return (
-    <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ height: '80px' }}></div>
-      <div style={{ flex: 1, padding: '40px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '2rem', marginBottom: '16px' }}>Services</h1>
-        <p style={{ color: '#a0a5b1' }}>Lighting services coming soon.</p>
-      </div>
-      <Footer />
-    </main>
+    <LightingRoutePage
+      eyebrow="Services"
+      title="Lighting support from concept to installation"
+      description="The services team helps shape fixture selection, spacing, and scene planning so the final result feels coherent across the entire project."
+      imageSrc="/mountain_lighting.png"
+      imageAlt="Lighting services preview"
+      primaryCtaLabel="Start a consultation"
+      primaryCtaHref="/contact"
+      points={[
+        'Project guidance for room-by-room lighting intent.',
+        'Fixture coordination that keeps aesthetics and performance aligned.',
+        'Support for retailers, studios, and residential commissions alike.',
+      ]}
+      related={[
+        { title: 'Indoor', href: '/lighting/indoor', description: 'Review the indoor family while planning a room.' },
+        { title: 'Lux', href: '/lighting/lux', description: 'Choose a statement piece for a focal space.' },
+        { title: 'Automation', href: '/lighting/automation', description: 'Add controls and intelligent scenes to the project.' },
+      ]}
+    />
   );
 }

@@ -1,15 +1,26 @@
 import React from 'react';
-import Footer from '@/components/Footer';
+import LightingRoutePage from '@/components/LightingRoutePage';
 
 export default function LightingProductsPage() {
   return (
-    <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ height: '80px' }}></div>
-      <div style={{ flex: 1, padding: '40px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '2rem', marginBottom: '16px' }}>Products</h1>
-        <p style={{ color: '#a0a5b1' }}>Lighting products catalog coming soon.</p>
-      </div>
-      <Footer />
-    </main>
+    <LightingRoutePage
+      eyebrow="Products"
+      title="A concise view of the full lighting range"
+      description="Use this page as a simple landing point for the lighting catalogue while the final product-level content is assembled."
+      imageSrc="/luminaire_indoor.png"
+      imageAlt="Lighting products overview"
+      primaryCtaLabel="Explore indoor range"
+      primaryCtaHref="/lighting/indoor"
+      points={[
+        'Indoor, outdoor, and Lux product families in one place.',
+        'A navigation-friendly overview for users moving through the site.',
+        'A consistent visual system that matches the rest of Sora.',
+      ]}
+      related={[
+        { title: 'Indoor', href: '/lighting/indoor', description: 'Start with the indoor collection.' },
+        { title: 'Outdoor', href: '/lighting/outdoor', description: 'Move into the exterior fixtures.' },
+        { title: 'Lux', href: '/lighting/lux', description: 'See the sculptural signature pieces.' },
+      ]}
+    />
   );
 }
