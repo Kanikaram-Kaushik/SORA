@@ -1,0 +1,237 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+.navSpacer {
+  height: 80px;
+  width: 100%;
+}
+
+/* Header Section */
+.header {
+  padding: 60px 24px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+  margin: 0 0 16px 0;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--foreground);
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* Info Section */
+.infoSection {
+  padding: 60px 24px;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionHeading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+  margin: 0 0 8px 0;
+}
+
+.sectionDescription {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px 0;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--foreground);
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* Contact Methods Section */
+.contactMethods {
+  padding: 60px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contactItem {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px;
+  background-color: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.contactItem:hover {
+  background-color: var(--surface-hover);
+  border-color: var(--primary);
+}
+
+.contactIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.contactContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactLabel {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.contactLink {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  word-break: break-all;
+}
+
+.contactLink:hover {
+  color: var(--primary);
+}
+
+.contactNote {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--foreground);
+  opacity: 0.6;
+  margin: 0;
+}
+
+/* Addresses Section */
+.addresses {
+  padding: 60px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .addresses {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+.addressBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background-color: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.addressHeading {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.addressText {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--foreground);
+  margin: 0;
+  opacity: 0.85;
+}
+
+@media (min-width: 1024px) {
+  .header,
+  .infoSection,
+  .contactMethods,
+  .addresses {
+    padding: 80px 40px;
+  }
+
+  .pageTitle {
+    font-size: 3.5rem;
+  }
+
+  .sectionHeading {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .contactMethods {
+    gap: 30px;
+  }
+
+  .contactItem {
+    padding: 32px;
+  }
+
+  .contactIcon {
+    font-size: 3rem;
+  }
+
+  .contactLink {
+    font-size: 1.2rem;
+  }
+}
+

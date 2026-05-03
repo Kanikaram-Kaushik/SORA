@@ -1,0 +1,144 @@
+/* ============================================================
+   Catalogue subpage — catalogue.module.css
+   ============================================================ */
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+}
+
+/* ─── Full-bleed hero image (top half of screen) ────────────── */
+.heroImage {
+  position: relative;
+  width: 100%;
+  /* Starts right below the fixed 60 px nav bar */
+  margin-top: 60px;
+  height: 52vw;         /* proportional to width, feels cinematic */
+  min-height: 220px;
+  max-height: 420px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.heroImg {
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  /* Fade from transparent at top to page background at bottom */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.0) 50%,
+    var(--background) 100%
+  );
+}
+
+/* ─── Coming-soon content card ──────────────────────────────── */
+.card {
+  flex: 1;
+  padding: 36px 24px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Category breadcrumb */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* Product title */
+.heading {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Animated accent line */
+.divider {
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--primary);
+  /* Slide-in animation */
+  animation: slideIn 0.7s ease forwards;
+}
+
+@keyframes slideIn {
+  from { width: 0; opacity: 0; }
+  to   { width: 48px; opacity: 1; }
+}
+
+/* Body copy */
+.body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--foreground);
+  opacity: 0.7;
+  max-width: 480px;
+  margin: 0;
+}
+
+/* ─── Action buttons ────────────────────────────────────────── */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 10px;
+  background-color: var(--foreground);
+  color: var(--background);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+
+.ctaButton:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: gap 0.2s ease, opacity 0.2s ease;
+  gap: 4px;
+}
+
+.backLink:hover {
+  opacity: 0.75;
+}

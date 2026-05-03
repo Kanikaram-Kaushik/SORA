@@ -1,0 +1,169 @@
+/* ============================================================
+   Downloads page — download.module.css
+   ============================================================ */
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+}
+
+/* ─── Page header bar (solid, same colour as nav) ──────────── */
+.pageHeader {
+  /* Match the nav bar background — glassmorphism fills are transparent
+     so we use the solid surface colour to give a clear band */
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  /* Push content below the fixed 60 px nav bar */
+  padding: 80px 24px 28px;
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* ─── Sections ─────────────────────────────────────────────── */
+.section {
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Divider between sections */
+.section + .section {
+  border-top: 1px solid var(--border);
+}
+
+.sectionHeading {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ─── 2-column grid ────────────────────────────────────────── */
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ─── Single catalogue item (thumbnail + title) ────────────── */
+.catalogueItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Large (full-width) featured item */
+.catalogueItemLarge {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Image containers */
+.imageLink {
+  display: block;
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;   /* Portrait — like a brochure */
+  background-color: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.imageWrapperLarge {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;  /* Wide — prominent hero feel */
+  background-color: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.catalogueImage {
+  object-fit: cover;
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.imageLink:hover .catalogueImage {
+  transform: scale(1.04);
+  filter: brightness(0.85);
+}
+
+/* Download icon that appears on hover */
+.downloadOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.imageLink:hover .downloadOverlay {
+  opacity: 1;
+}
+
+.downloadIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ─── Item title / hyperlink below image ───────────────────── */
+.itemTitle {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--foreground);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.itemTitle:hover {
+  color: var(--primary);
+}
+
+/* ─── Responsive — slightly larger on tablet ───────────────── */
+@media (min-width: 540px) {
+  .pageTitle {
+    font-size: 2.4rem;
+  }
+
+  .sectionHeading {
+    font-size: 1.6rem;
+  }
+
+  .itemTitle {
+    font-size: 1.05rem;
+  }
+}
