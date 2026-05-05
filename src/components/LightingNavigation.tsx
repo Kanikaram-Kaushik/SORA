@@ -7,11 +7,35 @@ import styles from './LightingNavigation.module.css';
 
 export default function LightingNavigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const lastScrollY = React.useRef(0);
   const pathname = usePathname();
 
   useEffect(() => {
     setIsOpen(false);
+    setShowNav(true);
   }, [pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Always show at the top of the page
+      if (currentScrollY < 50) {
+        setShowNav(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        // Scrolling down
+        setShowNav(false);
+      } else {
+        // Scrolling up
+        setShowNav(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -30,7 +54,7 @@ export default function LightingNavigation() {
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
         <div className={styles.headerInner}>
           <Link href="/" className={styles.logoGroup} aria-label="Sora home">
             <span className={styles.logo}>SORA</span>

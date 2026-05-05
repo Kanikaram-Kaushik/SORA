@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from './WindowTwo.module.css';
 
@@ -12,20 +12,20 @@ const slides = [
 ];
 
 export default function WindowTwo() {
-  const carouselRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (carouselRef.current) {
-        const width = carouselRef.current.clientWidth;
-        const maxScroll = carouselRef.current.scrollWidth - width;
-        const currentScroll = carouselRef.current.scrollLeft;
+      if (containerRef.current) {
+        const width = containerRef.current.clientWidth;
+        const maxScroll = containerRef.current.scrollWidth - width;
+        const currentScroll = containerRef.current.scrollLeft;
         
-        // Loop back to start if at the end
         if (currentScroll + 10 >= maxScroll) {
-          carouselRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+          containerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
-          carouselRef.current.scrollBy({ left: width + 16, behavior: 'smooth' });
+          containerRef.current.scrollBy({ left: width + 16, behavior: 'smooth' });
         }
       }
     }, 5000);
@@ -33,17 +33,23 @@ export default function WindowTwo() {
     return () => clearInterval(timer);
   }, []);
 
-  const scrollPrev = () => {
-    if (carouselRef.current) {
-      const width = carouselRef.current.clientWidth;
-      carouselRef.current.scrollBy({ left: -(width + 16), behavior: 'smooth' });
+  const handleScroll = () => {
+    if (containerRef.current) {
+      const scrollPosition = containerRef.current.scrollLeft;
+      const width = containerRef.current.clientWidth;
+      if (width > 0) {
+        const newIndex = Math.round(scrollPosition / (width + 16));
+        if (newIndex !== currentIndex) {
+          setCurrentIndex(newIndex);
+        }
+      }
     }
   };
 
-  const scrollNext = () => {
-    if (carouselRef.current) {
-      const width = carouselRef.current.clientWidth;
-      carouselRef.current.scrollBy({ left: (width + 16), behavior: 'smooth' });
+  const goToSlide = (index: number) => {
+    if (containerRef.current) {
+      const width = containerRef.current.clientWidth;
+      containerRef.current.scrollTo({ left: (width + 16) * index, behavior: 'smooth' });
     }
   };
 
@@ -55,7 +61,7 @@ export default function WindowTwo() {
       </div>
 
       <div className={styles.carouselWrapper}>
-        <div className={styles.carousel} ref={carouselRef}>
+        <div className={styles.carousel} ref={containerRef} onScroll={handleScroll}>
           {slides.map(slide => (
             <div key={slide.id} className={styles.slide}>
               <img src={slide.img} alt={slide.alt} className={styles.slideImage} />
@@ -71,9 +77,14 @@ export default function WindowTwo() {
         </Link>
       </div>
 
-      <div className={styles.controls}>
-        <button onClick={scrollPrev} className={styles.controlButton}>&#8592;</button>
-        <button onClick={scrollNext} className={styles.controlButton}>&#8594;</button>
+      <div className={styles.dotsContainer}>
+        {slides.map((_, i) => (
+          <div 
+            key={i} 
+            className={`${styles.dot} ${currentIndex === i ? styles.activeDot : ''}`}
+            onClick={() => goToSlide(i)}
+          />
+        ))}
       </div>
     </section>
   );

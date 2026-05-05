@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit, Playfair_Display } from "next/font/google";
+import { Outfit, Playfair_Display, Albert_Sans } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({ subsets: ["latin"], display: 'swap', variable: '--font-outfit' });
 const playfair = Playfair_Display({ subsets: ["latin"], display: 'swap', variable: '--font-playfair' });
+const albert = Albert_Sans({ subsets: ["latin"], display: 'swap', variable: '--font-albert' });
 
 export const viewport: Viewport = {
   themeColor: [
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${playfair.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${outfit.variable} ${playfair.variable} ${albert.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <div className="page-wrapper">
           {children}

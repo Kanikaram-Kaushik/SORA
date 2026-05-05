@@ -11,13 +11,13 @@
 }
 
 .hero {
-  padding: 24px;
+  padding: 10px;
 }
 
 .heroMedia {
   position: relative;
-  min-height: 72vh;
-  border-radius: 18px;
+  min-height: 85vh;
+  border-radius: 6px;
   overflow: hidden;
   background-color: var(--surface);
   border: 1px solid var(--border);
@@ -54,7 +54,7 @@
   position: absolute;
   left: 24px;
   right: 24px;
-  bottom: 30px;
+  bottom: 52px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -113,8 +113,8 @@
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background-color: rgba(255, 255, 255, 0.28);

@@ -79,6 +79,11 @@ export default function Navigation() {
 
   const toggleMenu = () => setIsOpen(prev => !prev);
 
+  // Do not render main navigation on lighting pages
+  if (pathname?.startsWith('/lighting')) {
+    return null;
+  }
+
   return (
     <>
       <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
@@ -180,6 +185,11 @@ export default function Navigation() {
           <div className={styles.bottomSection}>
             <ul className={styles.secondaryLinks}>
               <li>
+                <Link href="/download" onClick={() => setIsOpen(false)}>
+                  <span>Download</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" onClick={() => setIsOpen(false)}>
                   <span>About us</span>
                 </Link>
@@ -187,11 +197,6 @@ export default function Navigation() {
               <li>
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
                   <span>Contact</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/download" onClick={() => setIsOpen(false)}>
-                  <span>Download</span>
                 </Link>
               </li>
             </ul>

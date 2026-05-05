@@ -1,8 +1,8 @@
 .section {
-  padding: 40px 24px;
+  padding: 15px 15px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 10px;
   background-color: var(--background);
 }
 
@@ -10,7 +10,8 @@
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
-  border-radius: 16px;
+  border-radius: 6px;
+  height: 47vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;

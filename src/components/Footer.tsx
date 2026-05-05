@@ -17,12 +17,12 @@ export default function Footer() {
       {/* Middle Section */}
       <div className={styles.middleSection}>
         <div className={styles.linksSection}>
-          <div className={styles.socialTitle}>Social</div>
           <div className={styles.navLinks}>
             <Link href="/download" className={styles.navLink}>Downloads</Link>
             <Link href="/contact" className={styles.navLink}>Contact</Link>
             <Link href="/about" className={styles.navLink}>About</Link>
           </div>
+          <div className={styles.socialTitle}>Social</div>
         </div>
 
         <div className={styles.socialIcons}>
