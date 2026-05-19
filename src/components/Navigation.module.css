@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 60px;
-  background-color: var(--nav-bg);
+  background-color: #433d35 !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -35,7 +35,7 @@
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.1em;
-  color: var(--foreground);
+  color: #A3B18A;
 }
 
 .hamburger {
@@ -68,7 +68,7 @@
 .bar {
   width: 100%;
   height: 2px;
-  background-color: var(--foreground);
+  background-color: #A3B18A;
   transition: all 0.3s ease;
   border-radius: 10px;
 }
@@ -96,7 +96,7 @@
   right: 0;
   margin: 0 auto;
   height: 100vh;
-  background-color: #958e87;
+  background-color: var(--brand-dark);
   z-index: 150;
   display: flex;
   flex-direction: column;

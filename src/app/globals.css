@@ -8,6 +8,9 @@
   --secondary: #2563eb; /* Blue */
   --border: #e2e8f0;
   --nav-bg: rgba(149, 142, 135, 0.7); /* Translucent taupe */
+  /* Brand colors (from design image — adjustable) */
+  --brand-dark: #433d35; /* header / accent */
+  --brand-soft: #A3B18A; /* large content block background */
   /* =============================================
      FONT CONTROL CENTER
      Change any font independently below.
@@ -18,7 +21,7 @@
   --font-body: var(--font-outfit), sans-serif;
 
   /* Page headings — h1, h2, h3, etc. */
-  --font-heading: var(--font-playfair), serif;
+  --font-heading: var(--font-poppins, var(--font-playfair)), serif;
 
   /* Logo — "SORA" text in navbar */
   --font-logo: var(--font-albert), sans-serif;

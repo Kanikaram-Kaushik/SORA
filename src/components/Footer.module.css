@@ -1,117 +1,160 @@
 .footer {
-  background-color: #aba39b;
-  color: #fff;
-  padding: 45px 30px 0;
-  /* Removed bottom padding */
+  background-color: #DAD7CD;
+  padding: 40px 24px;
   display: flex;
   flex-direction: column;
-  font-family: var(--font-footer);
+  gap: 40px;
+  overflow: hidden;
 }
 
-.logo {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  color: #fff;
-  margin-bottom: 35px;
-  display: inline-block;
-}
-
-.address {
-  font-size: 1.2rem;
-  color: #403d3a;
-  line-height: 1.6;
-  margin-bottom: 120px;
-}
-
-.middleSection {
+.logoSection {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 48px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.watermarkLogo {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 15vw, 6rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 40px;
+  color: #000;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.addressWrapper {
+  position: relative;
+  margin-top: 10px;
+}
+
+.watermarkAddress {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+  z-index: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.addressText {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .linksSection {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 10px;
 }
 
-.socialTitle {
-  font-size: 1.6rem;
+.navLinkWrapper {
+  position: relative;
+}
+
+.watermarkLink {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.15);
   font-weight: 600;
-  color: #403d3a;
-  margin-bottom: 8px;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.navLinks {
+.navLink {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+}
+
+.socialSection {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.navLink {
-  color: #403d3a;
-  text-decoration: none;
-  font-size: 1.6rem;
-  transition: color 0.3s ease;
+.watermarkSocial {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.navLink:hover {
-  color: #fff;
+.socialTitle {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
 }
 
 .socialIcons {
-  padding-top: 135px;
   display: flex;
-  gap: 12px;
+  gap: 16px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+  margin-left: auto;
+  justify-content: flex-end;
 }
 
-.icon {
-  width: 60px;
-  height: 60px;
+.socialItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.circleIcon {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  background-color: #EAB8E4; /* Soft lavender/pink from mockup */
+  display: block;
 }
 
-.icon:hover {
-  border-color: #fff;
-  background-color: #fff;
-  color: #000;
-}
-
-.divider {
-  height: 1px;
-  background-color: #403d3a;
-  width: calc(100% + 60px);
-  /* 100% + left/right padding */
-  margin-left: -30px;
-  margin-right: -30px;
-  margin-top: 20px;
-  /* Added margin-top to separate from middle section */
-  margin-bottom: 0;
-}
-
-.bottomBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
-  color: #403d3a;
-  /* Darker color for better contrast on this background */
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 500;
-  padding: 30px 0;
+.iconLabel {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
 }

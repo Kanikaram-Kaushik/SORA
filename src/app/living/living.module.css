@@ -1,170 +1,420 @@
 .main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fbfaf8;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1. Hero Section */
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.heroBackground {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background-color: var(--background);
-}
-
-.carousel {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  height: 75vh;
+  background-image: url('/aranprime-KbytCpI1i5I-unsplash.jpg');
   background-size: cover;
   background-position: center;
-}
-
-.activeSlide {
-  opacity: 1;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.35) 0%,
-    transparent 40%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-.content {
-  position: absolute;
-  bottom: 60px;
-  left: 24px;
-  right: 24px;
-  z-index: 10;
-  color: var(--foreground);
-  pointer-events: auto;
-}
-
-.heading {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-}
-
-.description {
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 32px;
-  max-width: 85%;
-  opacity: 0.9;
-}
-
-.exploreLink {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 12px;
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--foreground);
-  text-decoration: none;
-  border-bottom: 2px solid var(--foreground);
-  padding-bottom: 4px;
-  transition: gap 0.3s ease;
+  justify-content: center;
 }
 
-.exploreLink:hover {
+.heroOverlayText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.heroBold {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.heroLight {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.oliveBlock {
+  background-color: #929B79;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
-.pagination {
-  position: absolute;
-  bottom: 40px;
-  right: 24px;
+.oliveBlock p {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+}
+
+/* Common Titles */
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 0 24px 0;
+}
+
+/* 2. Featured Products */
+.featuredSection {
+  padding: 60px 24px;
   display: flex;
-  gap: 12px;
-  z-index: 50; /* Ensure it's above everything */
+  flex-direction: column;
+}
+
+.featuredCarousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featuredCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.featuredImageWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+
+.paginationDots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .activeDot {
-  background-color: var(--surface);
-  transform: scale(1.3);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.45);
+  background-color: #000;
 }
 
-@media (prefers-color-scheme: light) {
-  .main {
-    background-color: var(--background);
-  }
-
-  .overlay {
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.60) 0%,
-      transparent 40%,
-      rgba(255, 255, 255, 0.92) 100%
-    );
-  }
-
-  .content {
-    color: var(--foreground);
-  }
-
-  .exploreLink {
-    color: var(--foreground);
-    border-bottom-color: var(--foreground);
-  }
-
-  .dot {
-    background-color: rgba(15, 17, 21, 0.38);
-    border: 1px solid rgba(15, 17, 21, 0.08);
-  }
-
-  .activeDot {
-    background-color: var(--foreground);
-    box-shadow: 0 0 12px rgba(15, 17, 21, 0.15);
-  }
+/* 3. Explore by Category */
+.categorySection {
+  padding: 0 24px 60px;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 768px) {
-  .content {
-    bottom: 80px;
-    left: 80px;
-  }
-  .heading {
-    font-size: 5rem;
-  }
-  .description {
-    font-size: 1.25rem;
-    max-width: 500px;
-  }
+.categoryStack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.categoryCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.categoryImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.categoryTitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+/* 4. From Concept to Form */
+.conceptSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.conceptImageTop {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #eee;
+}
+
+.conceptImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.moodboardBlock {
+  padding: 40px 24px 60px;
+  background-color: #E8E5E1; /* Or moodboard background */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.conceptTitle {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+.conceptDesc {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+  margin: 0;
+}
+
+/* 5. Core Design Pillars */
+.pillarsSection {
+  padding: 60px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pillarItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.pillarCircle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pillarText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pillarTitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+.pillarDesc {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/* 6. Sora Smart Bar Details */
+.detailsSection {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroTitleBlack {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  margin: 0 0 24px 0;
+}
+
+.heroBoldBlack {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.heroLightBlack {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.fullWidthImage {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: #eee;
+}
+
+.immersiveImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detailsTextBlock {
+  padding: 40px 24px;
+}
+
+.detailsTextBlock p {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+}
+
+.specsList {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+}
+
+.specItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.specItem h3 {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+.plusIcon {
+  font-size: 24px;
+  color: #000;
+  font-weight: 300;
+}
+
+/* 7. Dimensions & Warranty */
+.dimensionsSection {
+  padding: 60px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dimensionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.dimImageBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.dimImg {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.dimLabel {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  text-align: center;
+}
+
+.featuresRow {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.featureCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  max-width: 120px;
+}
+
+.featureIconBlock {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.featureIcon {
+  width: 100%;
+  height: auto;
+}
+
+.circlePlaceholder {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.featureCol p {
+  font-family: var(--font-murecho), var(--font-body);
+  font-size: 12px;
+  color: #000;
+  margin: 0;
+  line-height: 1.4;
 }

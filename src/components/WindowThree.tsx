@@ -7,47 +7,33 @@ export default function WindowThree() {
   return (
     <section className={styles.section}>
       {/* Lighting Card */}
-      <Link href="/lighting" className={styles.card}>
-        <Image 
-          src="/mountain_lighting.png" 
-          alt="Mountain lighting backdrop"
-          fill
-          className={styles.backgroundImage}
-          unoptimized
-        />
-        <div className={styles.overlay}></div>
-        
-        <div className={styles.topContent}>
-          <h2 className={styles.logoText}>Sora Lighting</h2>
-        </div>
-        
-        <div className={styles.bottomContent}>
-          <p className={styles.description}>Explore our range of lighting fixtures.</p>
-          <div className={styles.arrowWrapper}>
-            &#8594;
+      <Link href="/lighting" className={`${styles.card} ${styles.cardLighting}`}>
+        <div className={styles.watermark}>LIGHTING</div>
+
+        <div className={styles.cardContent}>
+          <h2 className={styles.cardTitle}>
+            <span className={styles.titleBold}>sora</span>
+            <span className={styles.titleLight}>Lighting</span>
+          </h2>
+          <div className={styles.bottomRow}>
+            <p className={styles.cardDesc}>Discover thoughtfully designed<br/>Spatial Lighting.</p>
+            <div className={styles.arrowIcon}>&#8594;</div>
           </div>
         </div>
       </Link>
 
       {/* Living Card */}
-      <Link href="/living" className={styles.card}>
-        <Image 
-          src="/house_products.png" 
-          alt="Home living setup"
-          fill
-          className={styles.backgroundImage}
-          unoptimized
-        />
-        <div className={styles.overlay}></div>
-        
-        <div className={styles.topContent}>
-          <h2 className={styles.logoText}>Sora Living</h2>
-        </div>
-        
-        <div className={styles.bottomContent}>
-          <p className={styles.description}>Explore our range of lifestyle products.</p>
-          <div className={styles.arrowWrapper}>
-            &#8594;
+      <Link href="/living" className={`${styles.card} ${styles.cardLiving}`}>
+        <div className={styles.watermark}>LIVING</div>
+
+        <div className={styles.cardContent}>
+          <h2 className={styles.cardTitle}>
+            <span className={styles.titleBold}>sora</span>
+            <span className={styles.titleLight}>Living</span>
+          </h2>
+          <div className={styles.bottomRow}>
+            <p className={styles.cardDesc}>Discover our objects designed for<br/>everyday life.</p>
+            <div className={styles.arrowIcon}>&#8594;</div>
           </div>
         </div>
       </Link>
