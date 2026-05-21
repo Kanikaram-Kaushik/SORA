@@ -64,7 +64,6 @@ export default function Carousel() {
               <img src={item.imageUrl} alt={item.title} className={styles.productImage} />
             </div>
             <div className={styles.productInfo}>
-              <div className={styles.watermarkBottom}>Collections</div>
               <h3 className={styles.productTitle}>{item.title}</h3>
               <span className={styles.arrowIcon}>&#8594;</span>
             </div>
