@@ -49,7 +49,6 @@ export default function Carousel() {
   return (
     <section className={styles.productSection}>
       <div className={styles.headerArea}>
-        <div className={styles.watermarkTop}>Exhibitions</div>
         <h2 className={styles.sectionTitle}>Product stories</h2>
         <p className={styles.sectionDesc}>Products and spaces shaped through thoughtful design and material clarity of light and form.</p>
       </div>

@@ -32,9 +32,9 @@ export default function LivingPage() {
         <div className={styles.featuredCarousel}>
           <div className={styles.featuredCard}>
             <div className={styles.featuredImageWrapper}>
-              <img src="/EFC6F478-DF0B-467B-8A69-85E2B776ADAF.png" alt="Sora Smart Bar" className={styles.productImage} />
-            </div>
-            <h3 className={styles.productTitle}>Sora Smart Bar</h3>
+                <img src="/EFC6F478-DF0B-467B-8A69-85E2B776ADAF.png" alt="Smart Bar" className={styles.productImage} />
+              </div>
+              <h3 className={styles.productTitle}>Smart Bar</h3>
           </div>
           <div className={styles.paginationDots}>
             <div className={`${styles.dot} ${styles.activeDot}`}></div>
@@ -101,67 +101,6 @@ export default function LivingPage() {
           <div className={styles.pillarText}>
             <h3 className={styles.pillarTitle}>Material Responsibility</h3>
             <p className={styles.pillarDesc}>Prioritising responsibly sourced materials and ensuring components can be repaired or recycled.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Sora Smart Bar Details */}
-      <section className={styles.detailsSection}>
-        <h2 className={styles.heroTitleBlack}>
-          <span className={styles.heroBoldBlack}>sora</span>
-          <span className={styles.heroLightBlack}>Smart Bar</span>
-        </h2>
-        <div className={styles.fullWidthImage}>
-          <img src="/EFC6F478-DF0B-467B-8A69-85E2B776ADAF.png" alt="Smart Bar" className={styles.immersiveImg} />
-        </div>
-        <div className={styles.detailsTextBlock}>
-          <p>
-            A centerpiece that adapts to your needs. Designed for seamless entertaining, the Sora Smart Bar blends intuitive storage with built-in functionality, letting you host with ease and elegance.
-          </p>
-        </div>
-
-        <div className={styles.specsList}>
-          <div className={styles.specItem}>
-            <h3>Details that matter</h3>
-            <span className={styles.plusIcon}>+</span>
-          </div>
-          <div className={styles.specItem}>
-            <h3>Materials</h3>
-            <span className={styles.plusIcon}>+</span>
-          </div>
-          <div className={styles.specItem}>
-            <h3>Specifications</h3>
-            <span className={styles.plusIcon}>+</span>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Dimensions & Warranty */}
-      <section className={styles.dimensionsSection}>
-        <h2 className={styles.sectionTitle}>Dimensions</h2>
-        <div className={styles.dimensionsGrid}>
-          <div className={styles.dimImageBlock}>
-            <img src="/dim-closed.jpg" alt="Dimensions Closed" className={styles.dimImg} />
-            <p className={styles.dimLabel}>35.5 in W when closed</p>
-          </div>
-          <div className={styles.dimImageBlock}>
-            <img src="/dim-open.jpg" alt="Dimensions Open" className={styles.dimImg} />
-            <p className={styles.dimLabel}>71 in W when open</p>
-          </div>
-        </div>
-
-        <div className={styles.featuresRow}>
-          <div className={styles.featureCol}>
-            <div className={styles.featureIconBlock}>
-              <div className={styles.circlePlaceholder}></div>
-            </div>
-            <p>5-Year Limited Warranty</p>
-          </div>
-          <div className={styles.featureCol}>
-            <div className={styles.featureIconBlock}>
-              <div className={styles.circlePlaceholder}></div>
-            </div>
-            <p>Customization Available</p>
           </div>
         </div>
       </section>

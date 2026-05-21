@@ -21,8 +21,16 @@ export default function LivingNavigation() {
 
   // Handle header show/hide on scroll
   useEffect(() => {
+    const scrollContainer = document.getElementById('scroll-container') || window;
+    
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      let currentScrollY = 0;
+      if (scrollContainer === window) {
+        currentScrollY = window.scrollY;
+      } else {
+        currentScrollY = (scrollContainer as HTMLElement).scrollTop;
+      }
+      
       if (currentScrollY < 50) {
         setShowNav(true);
       } else if (currentScrollY > lastScrollY.current) {
@@ -32,18 +40,25 @@ export default function LivingNavigation() {
       }
       lastScrollY.current = currentScrollY;
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    scrollContainer.addEventListener('scroll', handleScroll, { passive: true });
+    return () => scrollContainer.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Disable background scrolling when menu is open
   useEffect(() => {
     if (isOpen) {
+      document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
     } else {
+      document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
     }
-    return () => { document.body.style.overflow = ''; };
+    
+    return () => {
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    };
   }, [isOpen]);
 
   const toggleMenu = () => {

@@ -7,11 +7,11 @@ export default function Footer() {
     <footer className={styles.footer}>
       {/* Top Section */}
       <div className={styles.logoSection}>
-        <div className={styles.watermarkLogo}>SORA</div>
-        <h2 className={styles.logoText}>sora</h2>
+        <Link href="/" className={styles.logoLink} aria-label="Sora home">
+          <h2 className={styles.logoText}>sora</h2>
+        </Link>
         
         <div className={styles.addressWrapper}>
-          <div className={styles.watermarkAddress}>HITEC City, Hyderabad,<br/>Telangana 500081</div>
           <p className={styles.addressText}>
             Veera Reddy Colony,<br />
             Nacharam, Hyderabad,<br />
@@ -24,22 +24,18 @@ export default function Footer() {
       {/* Middle Section */}
       <div className={styles.linksSection}>
         <div className={styles.navLinkWrapper}>
-          <div className={styles.watermarkLink}>Downloads</div>
           <Link href="/download" className={styles.navLink}>Downloads</Link>
         </div>
         <div className={styles.navLinkWrapper}>
-          <div className={styles.watermarkLink}>Contact</div>
           <Link href="/contact" className={styles.navLink}>Contact</Link>
         </div>
         <div className={styles.navLinkWrapper}>
-          <div className={styles.watermarkLink}>About</div>
           <Link href="/about" className={styles.navLink}>About</Link>
         </div>
       </div>
 
       {/* Bottom Section - Social */}
       <div className={styles.socialSection}>
-        <div className={styles.watermarkSocial}>Social</div>
         <h3 className={styles.socialTitle}>Social</h3>
         
         <div className={styles.socialIcons}>
@@ -55,6 +51,14 @@ export default function Footer() {
             <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className={styles.circleIcon} aria-label="Pinterest"></a>
             <span className={styles.iconLabel}>PIN</span>
           </div>
+        </div>
+      </div>
+
+      <div className={styles.bottomBar}>
+        <div className={styles.bottomDivider}></div>
+        <div className={styles.bottomLocations}>
+          <span>Hyderabad</span>
+          <span>India</span>
         </div>
       </div>
     </footer>

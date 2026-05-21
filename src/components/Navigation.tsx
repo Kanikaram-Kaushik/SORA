@@ -79,8 +79,8 @@ export default function Navigation() {
 
   const toggleMenu = () => setIsOpen(prev => !prev);
 
-  // Do not render main navigation on lighting pages
-  if (pathname?.startsWith('/lighting')) {
+  // Do not render main navigation on lighting or living pages
+  if (pathname?.startsWith('/lighting') || pathname?.startsWith('/living')) {
     return null;
   }
 
