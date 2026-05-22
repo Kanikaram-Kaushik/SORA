@@ -215,21 +215,30 @@
 
 /* 5. Core Design Pillars */
 .pillarsSection {
-  padding: 60px 24px;
+  padding: 80px 24px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 40px;
+  background-color: #FBF9F6;
+}
+
+.pillarsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .pillarItem {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
 }
 
 .pillarCircle {
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -242,18 +251,20 @@
 
 .pillarTitle {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #000;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333;
   margin: 0;
 }
 
-.pillarDesc {
+.pillarsFooterText {
   font-family: var(--font-murecho), var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.7);
-  margin: 0;
+  color: #4a423a;
+  text-align: center;
+  margin: 40px auto 0 auto;
+  max-width: 280px;
 }
 
 /* 6. Sora Smart Bar Details */
@@ -417,4 +428,33 @@
   color: #000;
   margin: 0;
   line-height: 1.4;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 768px) {
+  .pillarsContainer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  .categoryStack {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .categoryCard {
+    width: calc(33.333% - 16px);
+  }
+
+  .featuredCard {
+    max-width: 600px;
+  }
+
+  .heroBold,
+  .heroLight,
+  .heroBoldBlack,
+  .heroLightBlack {
+    font-size: 5rem;
+  }
 }

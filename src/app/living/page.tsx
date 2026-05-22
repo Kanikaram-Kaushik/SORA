@@ -78,31 +78,32 @@ export default function LivingPage() {
 
       {/* 5. Core Design Pillars */}
       <section className={styles.pillarsSection}>
-        <h2 className={styles.sectionTitle}>Core Design Pillars</h2>
-        
-        <div className={styles.pillarItem}>
-          <div className={styles.pillarCircle} style={{backgroundColor: '#b5a596'}}></div>
-          <div className={styles.pillarText}>
-            <h3 className={styles.pillarTitle}>Material Integrity</h3>
-            <p className={styles.pillarDesc}>Honest use of materials, letting textures and natural wear become part of the object's story.</p>
+        <div className={styles.pillarsContainer}>
+          <div className={styles.pillarItem}>
+            <div className={styles.pillarCircle} style={{backgroundColor: '#D1BFA9'}}></div>
+            <div className={styles.pillarText}>
+              <h3 className={styles.pillarTitle}>Material Integrity</h3>
+            </div>
+          </div>
+
+          <div className={styles.pillarItem}>
+            <div className={styles.pillarCircle} style={{backgroundColor: '#89725C'}}></div>
+            <div className={styles.pillarText}>
+              <h3 className={styles.pillarTitle}>Regionally Informed<br/>Design</h3>
+            </div>
+          </div>
+
+          <div className={styles.pillarItem}>
+            <div className={styles.pillarCircle} style={{backgroundColor: '#604739'}}></div>
+            <div className={styles.pillarText}>
+              <h3 className={styles.pillarTitle}>Material Responsibility</h3>
+            </div>
           </div>
         </div>
 
-        <div className={styles.pillarItem}>
-          <div className={styles.pillarCircle} style={{backgroundColor: '#8c6b54'}}></div>
-          <div className={styles.pillarText}>
-            <h3 className={styles.pillarTitle}>Regionally Informed Design</h3>
-            <p className={styles.pillarDesc}>Designing with an awareness of local contexts, climate, and domestic behaviors.</p>
-          </div>
-        </div>
-
-        <div className={styles.pillarItem}>
-          <div className={styles.pillarCircle} style={{backgroundColor: '#4a3d34'}}></div>
-          <div className={styles.pillarText}>
-            <h3 className={styles.pillarTitle}>Material Responsibility</h3>
-            <p className={styles.pillarDesc}>Prioritising responsibly sourced materials and ensuring components can be repaired or recycled.</p>
-          </div>
-        </div>
+        <p className={styles.pillarsFooterText}>
+          Repairability, Recyclability and Long term usability are considered throughout every stage of development
+        </p>
       </section>
 
       <Footer />
