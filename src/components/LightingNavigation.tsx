@@ -19,7 +19,7 @@ export default function LightingNavigation() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Always show at the top of the page
       if (currentScrollY < 50) {
         setShowNav(true);
@@ -56,7 +56,7 @@ export default function LightingNavigation() {
     <>
       <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
         <div className={styles.headerInner}>
-          <Link href="/" className={styles.logoGroup} aria-label="Sora home">
+          <Link href="/lighting" className={styles.logoGroup} aria-label="Sora home">
             <span className={styles.logo}>SORA</span>
             <span className={styles.subTitle}>Lighting</span>
           </Link>
@@ -77,7 +77,7 @@ export default function LightingNavigation() {
 
       <div className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`}>
         <div className={styles.overlayHeader}>
-          <Link href="/" className={styles.overlayLogo} onClick={() => setIsOpen(false)}>
+          <Link href="/lighting" className={styles.overlayLogo} onClick={() => setIsOpen(false)}>
             <span className={styles.logo}>SORA</span>
             <span className={styles.subTitle}>Lighting</span>
           </Link>
@@ -96,7 +96,7 @@ export default function LightingNavigation() {
 
         <nav className={styles.navMenu} aria-label="Lighting site navigation">
           <div className={styles.primarySection}>
-            <Link href="/lighting" className={styles.primaryLink} onClick={() => setIsOpen(false)}>
+            <Link href="/" className={styles.primaryLink} onClick={() => setIsOpen(false)}>
               Home
             </Link>
             <Link href="/lighting/indoor" className={styles.primaryLink} onClick={() => setIsOpen(false)}>
@@ -113,6 +113,9 @@ export default function LightingNavigation() {
             </Link>
             <Link href="/lighting/automation" className={styles.primaryLink} onClick={() => setIsOpen(false)}>
               Automation
+            </Link>
+            <Link href="/living" className={styles.primaryLink} style={{ marginTop: '32px' }} onClick={() => setIsOpen(false)}>
+              Sora Living
             </Link>
           </div>
 

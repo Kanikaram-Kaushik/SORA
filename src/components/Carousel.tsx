@@ -3,21 +3,30 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './Carousel.module.css';
 
-const carouselData = [
+const showcaseData = [
   {
     id: 1,
-    title: "Bar Counter",
-    imageUrl: "/EFC6F478-DF0B-467B-8A69-85E2B776ADAF.png",
+    title: "Astra",
+    brand: "by sora Lighting",
+    imageUrl: "/A4190F5A-787E-4CEA-A3B8-CE631CE3D764.PNG", // User will provide image
   },
   {
     id: 2,
-    title: "Lounge Seating",
+    title: "sora Smart Bar",
+    brand: "by sora Living",
     imageUrl: "/EFC6F478-DF0B-467B-8A69-85E2B776ADAF.png",
   },
   {
     id: 3,
-    title: "Table Accents",
-    imageUrl: "/EFC6F478-DF0B-467B-8A69-85E2B776ADAF.png",
+    title: "Helix",
+    brand: "by sora Lighting",
+    imageUrl: "/spiral.jpg",
+  },
+  {
+    id: 4,
+    title: "Lighting Design",
+    brand: "by sora Lighting",
+    imageUrl: "/6C8FB932-4BC1-49B8-B516-778849BC18AE.PNG",
   }
 ];
 
@@ -29,7 +38,7 @@ export default function Carousel() {
     const timer = setInterval(() => {
       if (containerRef.current) {
         const width = containerRef.current.clientWidth;
-        const nextIndex = (currentIndex + 1) % carouselData.length;
+        const nextIndex = (currentIndex + 1) % showcaseData.length;
         containerRef.current.scrollTo({ left: width * nextIndex, behavior: 'smooth' });
       }
     }, 5000);
@@ -47,38 +56,44 @@ export default function Carousel() {
   };
 
   return (
-    <section className={styles.productSection}>
+    <section className={styles.showcaseSection}>
       <div className={styles.headerArea}>
-        <h2 className={styles.sectionTitle}>Product stories</h2>
-        <p className={styles.sectionDesc}>Products and spaces shaped through thoughtful design and material clarity of light and form.</p>
+        <h2 className={styles.sectionTitle}>Design Showcase</h2>
+        <p className={styles.sectionDesc}>
+          Products and spaces shaped through thoughtful design and material clarity
+        </p>
       </div>
 
-      <div 
-        className={styles.carouselContainer} 
+      <div
+        className={styles.carouselContainer}
         ref={containerRef}
         onScroll={handleScroll}
       >
-        {carouselData.map((item, index) => (
+        {showcaseData.map((item) => (
           <div key={item.id} className={styles.slide}>
             <div className={styles.imageWrapper}>
-              <img src={item.imageUrl} alt={item.title} className={styles.productImage} />
+              {item.imageUrl ? (
+                <img src={item.imageUrl} alt={item.title} className={styles.productImage} />
+              ) : (
+                <div className={styles.imagePlaceholder}></div>
+              )}
             </div>
             <div className={styles.productInfo}>
               <h3 className={styles.productTitle}>{item.title}</h3>
-              <span className={styles.arrowIcon}>&#8594;</span>
+              <p className={styles.productBrand}>{item.brand}</p>
             </div>
           </div>
         ))}
       </div>
 
       <div className={styles.paginationRow}>
-        {carouselData.map((_, i) => (
-          <div 
-            key={i} 
+        {showcaseData.map((_, i) => (
+          <div
+            key={i}
             className={`${styles.dot} ${currentIndex === i ? styles.activeDot : ''}`}
             onClick={() => {
-                const width = containerRef.current?.clientWidth || 0;
-                containerRef.current?.scrollTo({ left: width * i, behavior: 'smooth' });
+              const width = containerRef.current?.clientWidth || 0;
+              containerRef.current?.scrollTo({ left: width * i, behavior: 'smooth' });
             }}
           />
         ))}

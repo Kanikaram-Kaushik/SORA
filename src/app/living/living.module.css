@@ -6,6 +6,8 @@
   color: #000;
   margin: 0;
   padding: 0;
+  padding-top: 10px;
+  /* Prevent header overlap */
 }
 
 /* 1. Hero Section */
@@ -75,9 +77,27 @@
 
 /* 2. Featured Products */
 .featuredSection {
-  padding: 60px 24px;
+  padding: 60px 24px 24px;
   display: flex;
   flex-direction: column;
+}
+
+.featuredTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: #6d7b8d;
+  font-weight: 300;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.featuredSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #000;
+  margin: 0 0 24px 0;
+  text-align: left;
+  line-height: 1.4;
 }
 
 .featuredCarousel {
@@ -191,7 +211,8 @@
 
 .moodboardBlock {
   padding: 40px 24px 60px;
-  background-color: #E8E5E1; /* Or moodboard background */
+  background-color: #E8E5E1;
+  /* Or moodboard background */
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -442,7 +463,7 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   .categoryCard {
     width: calc(33.333% - 16px);
   }

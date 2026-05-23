@@ -1,5 +1,6 @@
 import React from 'react';
 import LivingNavigation from '@/components/LivingNavigation';
+import FeaturedCarousel from '@/components/FeaturedCarousel';
 import Footer from '@/components/Footer';
 import styles from './living.module.css';
 
@@ -28,20 +29,9 @@ export default function LivingPage() {
 
       {/* 2. Featured Products */}
       <section className={styles.featuredSection}>
-        <h2 className={styles.sectionTitle}>Featured Products</h2>
-        <div className={styles.featuredCarousel}>
-          <div className={styles.featuredCard}>
-            <div className={styles.featuredImageWrapper}>
-                <img src="/EFC6F478-DF0B-467B-8A69-85E2B776ADAF.png" alt="Smart Bar" className={styles.productImage} />
-              </div>
-              <h3 className={styles.productTitle}>Smart Bar</h3>
-          </div>
-          <div className={styles.paginationDots}>
-            <div className={`${styles.dot} ${styles.activeDot}`}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-        </div>
+        <h2 className={styles.featuredTitle}>Featured Products</h2>
+        <p className={styles.featuredSubtitle}>A curated selection<br/>of our products</p>
+        <FeaturedCarousel />
       </section>
 
       {/* 3. Explore by Category */}

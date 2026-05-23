@@ -22,7 +22,7 @@ export default function LivingNavigation() {
   // Handle header show/hide on scroll
   useEffect(() => {
     const scrollContainer = document.getElementById('scroll-container') || window;
-    
+
     const handleScroll = () => {
       let currentScrollY = 0;
       if (scrollContainer === window) {
@@ -30,7 +30,7 @@ export default function LivingNavigation() {
       } else {
         currentScrollY = (scrollContainer as HTMLElement).scrollTop;
       }
-      
+
       if (currentScrollY < 50) {
         setShowNav(true);
       } else if (currentScrollY > lastScrollY.current) {
@@ -40,7 +40,7 @@ export default function LivingNavigation() {
       }
       lastScrollY.current = currentScrollY;
     };
-    
+
     scrollContainer.addEventListener('scroll', handleScroll, { passive: true });
     return () => scrollContainer.removeEventListener('scroll', handleScroll);
   }, []);
@@ -54,7 +54,7 @@ export default function LivingNavigation() {
       document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
     }
-    
+
     return () => {
       document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
@@ -74,15 +74,13 @@ export default function LivingNavigation() {
     <>
       <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
         <div className={styles.headerInner}>
-          <div className={styles.logoGroup}>
-            <div className={styles.logo}>
-              <Link href="/">SORA</Link>
-            </div>
+          <Link href="/living" className={styles.logoGroup}>
+            <div className={styles.logo}>SORA</div>
             <span className={styles.livingText}>Living</span>
-          </div>
-          
-          <button 
-            className={`${styles.hamburger} ${isOpen ? styles.open : ''}`} 
+          </Link>
+
+          <button
+            className={`${styles.hamburger} ${isOpen ? styles.open : ''}`}
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -96,15 +94,13 @@ export default function LivingNavigation() {
       {/* Full screen overlay menu — matched to NEW wireframe */}
       <div className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`}>
         <div className={styles.overlayHeader}>
-          <div className={styles.logoGroup}>
-            <div className={styles.logo}>
-              <Link href="/" className={styles.overlayLogoText} onClick={() => setIsOpen(false)}>SORA</Link>
-            </div>
+          <Link href="/living" className={styles.logoGroup} onClick={() => setIsOpen(false)}>
+            <div className={`${styles.logo} ${styles.overlayLogoText}`}>SORA</div>
             <span className={styles.livingTextOverlay}>Living</span>
-          </div>
-          
-          <button 
-            className={`${styles.hamburger} ${isOpen ? styles.open : ''} ${styles.closeBtn}`} 
+          </Link>
+
+          <button
+            className={`${styles.hamburger} ${isOpen ? styles.open : ''} ${styles.closeBtn}`}
             onClick={toggleMenu}
           >
             <span className={styles.bar}></span>
@@ -112,11 +108,11 @@ export default function LivingNavigation() {
             <span className={styles.bar}></span>
           </button>
         </div>
-        
+
         <nav className={styles.navMenu}>
           <ul className={styles.primaryLinks}>
             <li>
-              <Link href="/living" onClick={() => setIsOpen(false)}>
+              <Link href="/" onClick={() => setIsOpen(false)}>
                 <span>Home</span>
               </Link>
             </li>
@@ -165,8 +161,13 @@ export default function LivingNavigation() {
                 <span>Gifting</span>
               </Link>
             </li>
+            <li style={{ marginTop: '32px' }}>
+              <Link href="/lighting" onClick={() => setIsOpen(false)}>
+                <span>Sora Lighting</span>
+              </Link>
+            </li>
           </ul>
-          
+
           <div className={styles.bottomSection}>
             <ul className={styles.secondaryLinks}>
               <li>
