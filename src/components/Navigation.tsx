@@ -90,7 +90,7 @@ export default function Navigation() {
       <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
         <div className={styles.headerInner}>
           <div className={styles.logo}>
-            <Link href="/"><Image src="/Sora-Objects-PNG-Light.png" alt="Sora" width={125} height={125} /></Link>
+            <Link href="/"><Image src="/Sora-Objects-PNG-Light1.png" alt="Sora" width={115} height={65} style={{ marginTop: "-35%" }} /></Link>
           </div>
           <button 
             className={`${styles.hamburger} ${isOpen ? styles.open : ''}`} 
@@ -108,16 +108,16 @@ export default function Navigation() {
       <div className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`}>
         <div className={styles.overlayHeader}>
           <div className={styles.logo}>
-            <Link href="/" className={styles.overlayLogoText} onClick={() => setIsOpen(false)}>SORA</Link>
+            <Link href="/" className={styles.overlayLogoText} onClick={() => setIsOpen(false)}><Image src="/Sora-Objects-PNG-Light1.png" alt="Sora" width={115} height={65} style={{ marginTop: "-25%" }} /></Link>
           </div>
           
           <div className={styles.overlayHeaderRight}>
-            <button className={styles.searchBtn} aria-label="Search">
+            {/* <button className={styles.searchBtn} aria-label="Search">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
-            </button>
+            </button> */}
             <button 
               className={`${styles.hamburger} ${isOpen ? styles.open : ''} ${styles.closeBtn}`} 
               onClick={toggleMenu}
@@ -162,22 +162,17 @@ export default function Navigation() {
             <ul className={styles.primaryLinks}>
               <li>
                 <Link href="/living" onClick={() => setIsOpen(false)}>
-                  <span>Sora Living</span>
+                  <span>sora Living</span>
                 </Link>
               </li>
               <li>
                 <Link href="/lighting" onClick={() => setIsOpen(false)}>
-                  <span>Sora Lighting</span>
+                  <span>sora Lighting</span>
                 </Link>
               </li>
               <li>
                 <Link href="/behind-design" onClick={() => setIsOpen(false)}>
                   <span>Behind the design</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/design" onClick={() => setIsOpen(false)}>
-                  <span>Design</span>
                 </Link>
               </li>
             </ul>
@@ -188,16 +183,34 @@ export default function Navigation() {
               <li>
                 <Link href="/download" onClick={() => setIsOpen(false)}>
                   <span>Download</span>
+                  <span className={styles.arrowIconSm}>
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/about" onClick={() => setIsOpen(false)}>
                   <span>About us</span>
+                  <span className={styles.arrowIconSm}>
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
                   <span>Contact</span>
+                  <span className={styles.arrowIconSm}>
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>
+                  </span>
                 </Link>
               </li>
             </ul>

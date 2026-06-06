@@ -26,7 +26,7 @@ const showcaseData = [
     id: 4,
     title: "Lighting Design",
     brand: "by sora Lighting",
-    imageUrl: "/6C8FB932-4BC1-49B8-B516-778849BC18AE.PNG",
+    imageUrl: "/6C8FB932-4BC1-49B8-B516-778849BC18AE1.PNG",
   }
 ];
 
@@ -100,7 +100,7 @@ export default function Carousel() {
       </div>
 
       <div className={styles.designBlock}>
-        <h2>The Design</h2>
+        <h2>The <br></br>Design</h2>
       </div>
     </section>
   );

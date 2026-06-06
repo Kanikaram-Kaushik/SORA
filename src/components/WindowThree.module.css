@@ -1,5 +1,5 @@
 .section {
-  background-color: #000000;
+  background-color: #7e7b7a;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
 
 .cardLighting {
   aspect-ratio: 1 / 1;
-  background-color: #9A8C98;
+  background-color: #574242;
 }
 
 .cardLiving {
@@ -82,21 +82,24 @@
 
 .cardDesc {
   font-family: var(--font-murecho), var(--font-body);
-  font-size: 13px;
-  color: #000;
+  font-size: 17px;
+  color: #90908d;
   line-height: 1.4;
   margin: 0;
 }
 
 .arrowIcon {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  color: #fff;
   font-weight: 300;
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #ffff;
 }

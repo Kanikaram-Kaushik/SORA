@@ -27,7 +27,7 @@
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.7);
   max-width: 280px;
-  margin: 0;
+  margin-left: 8px;
 }
 
 .carouselContainer {
@@ -88,10 +88,12 @@
 
 .productBrand {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 17px;
   color: rgba(0, 0, 0, 0.6);
-  margin: 0;
+  margin-left: 4px;
+  margin-top: 1px;
 }
+
 
 .paginationRow {
   display: flex;
@@ -116,7 +118,7 @@
 }
 
 .designBlock {
-  background-color: #A3B18A;
+  background-color: #6a5b51;
   padding: 24px 24px 40px;
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -126,6 +128,6 @@
   font-family: var(--font-poppins), var(--font-heading);
   font-weight: 400;
   font-size: 32px;
-  color: #000;
-  margin: 0;
+  color: #484341;
+  margin-bottom: -10;
 }

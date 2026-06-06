@@ -33,7 +33,6 @@
 
 .logo {
   margin-left: -20px;
-  margin-top: 5px;
 }
 
 .logo a {
@@ -137,7 +136,7 @@
 }
 
 .overlayLogoText {
-  color: var(--foreground) !important;
+  color: #F8F7F5 !important;
 }
 
 .overlayHeaderRight {
@@ -169,7 +168,8 @@
 }
 
 .primaryLinks {
-  gap: 24px;
+  gap: 40px;
+  margin-top: 50px;
 }
 
 .primaryLinks a {
@@ -179,7 +179,7 @@
   font-family: var(--font-nav-primary);
   font-size: 2rem;
   font-weight: 400;
-  color: var(--foreground);
+  color: #F8F7F5;
   letter-spacing: -0.02em;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -198,19 +198,23 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding-bottom: 40px;
+  width: 100%;
 }
 
 .secondaryLinks {
-  gap: 12px;
+  gap: 24px;
+  width: 100%;
 }
 
 .secondaryLinks a {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   font-family: var(--font-nav-secondary);
-  font-size: 1.3rem;
-  color: #000000;
+  font-size: 1.5rem;
+  color: #8a8989;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.2s ease;
