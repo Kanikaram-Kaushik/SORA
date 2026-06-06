@@ -11,7 +11,7 @@
   display: block;
   border-radius: 0px;
   overflow: hidden;
-  height: 80vh;
+  height: 60vh;
   /* Tall columns to approximate the mobile mock */
   min-height: 360px;
   /* Better proportion for 50vw columns */

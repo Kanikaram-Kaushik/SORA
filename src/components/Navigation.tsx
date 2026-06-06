@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Navigation.module.css';
 
@@ -89,7 +90,7 @@ export default function Navigation() {
       <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
         <div className={styles.headerInner}>
           <div className={styles.logo}>
-            <Link href="/">SORA</Link>
+            <Link href="/"><Image src="/sora_logo.png" alt="Sora" width={100} height={100} /></Link>
           </div>
           <button 
             className={`${styles.hamburger} ${isOpen ? styles.open : ''}`} 

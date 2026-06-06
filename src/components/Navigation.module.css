@@ -31,6 +31,11 @@
   transform: translateY(-100%);
 }
 
+.logo {
+  margin-left: -20px;
+  margin-top: 5px;
+}
+
 .logo a {
   font-size: 1.25rem;
   font-weight: 500;

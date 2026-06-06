@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './LightingNavigation.module.css';
 
@@ -56,9 +57,11 @@ export default function LightingNavigation() {
     <>
       <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
         <div className={styles.headerInner}>
-          <Link href="/lighting" className={styles.logoGroup} aria-label="Sora home">
-            <span className={styles.logo}>SORA</span>
-            <span className={styles.subTitle}>Lighting</span>
+          <Link href="/living" className={styles.logoGroup}>
+            {/* <div className={styles.logo}>SORA</div>
+            <span className={styles.livingText}>Living</span> */}
+            <Image src="/sora_lighting_logo.png" alt="Sora_lighting" width={200} height={200} />
+
           </Link>
 
           <button

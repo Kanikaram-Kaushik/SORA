@@ -36,6 +36,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 2px;
+  margin-left: -10px;
 }
 
 .logo {

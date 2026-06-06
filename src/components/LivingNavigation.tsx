@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './LivingNavigation.module.css';
 
@@ -75,8 +76,9 @@ export default function LivingNavigation() {
       <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
         <div className={styles.headerInner}>
           <Link href="/living" className={styles.logoGroup}>
-            <div className={styles.logo}>SORA</div>
-            <span className={styles.livingText}>Living</span>
+            {/* <div className={styles.logo}>SORA</div>
+            <span className={styles.livingText}>Living</span> */}
+            <Image src="/sora_living_logo.png" alt="Sora_living" width={100} height={100} />
           </Link>
 
           <button

@@ -2,18 +2,18 @@
 
 import React from 'react';
 import LivingNavigation from '@/components/LivingNavigation';
-import Footer from '@/components/Footer';
 import styles from './page.module.css';
+import Footer from '@/components/Footer';
 
 export default function BarCounterPage() {
   return (
     <main id="scroll-container" className={styles.main}>
       <LivingNavigation />
-      
+
       <section className={styles.windowOne}>
         <div className={styles.heroImageContainer}>
           <img src="/EFC6F478-DF0B-467B-8A69-85E2B776ADAF.png" alt="Smart Bar" className={styles.heroImage} />
-          
+
           <div className={styles.heroOverlay}>
             <div className={styles.heroHeader}>
               <span className={styles.smallTitle}>sora</span>
@@ -38,13 +38,13 @@ export default function BarCounterPage() {
 
       <section className={styles.windowTwo}>
         <div className={styles.windowTwoImageContainer}>
-          <img 
-            src="/win2bar.jpeg" 
-            alt="Smart Bar Front" 
-            className={styles.windowTwoImage} 
+          <img
+            src="/win2bar.jpeg"
+            alt="Smart Bar Front"
+            className={styles.windowTwoImage}
           />
         </div>
-        
+
         <div className={styles.detailsContainer}>
           <div className={styles.detailsSection}>
             <h2 className={styles.detailsTitle}>Details that matter</h2>
@@ -56,9 +56,9 @@ export default function BarCounterPage() {
               <li>Seamless operation with a single tap</li>
             </ul>
           </div>
-          
+
           <div className={styles.fullWidthDivider}></div>
-          
+
           <div className={styles.detailsSection}>
             <h2 className={styles.detailsTitle}>Materials</h2>
             <ul className={styles.detailsList}>
@@ -97,16 +97,16 @@ export default function BarCounterPage() {
         <div className={styles.badgesContainer}>
           <div className={styles.badgeItem}>
             <div className={styles.badgeCircle}></div>
-            <p className={styles.badgeText}>5 Year<br/>Warranty</p>
+            <p className={styles.badgeText}>5 Year<br />Warranty</p>
           </div>
           <div className={styles.badgeItem}>
             <div className={styles.badgeCircle}></div>
-            <p className={styles.badgeText}>Available in<br/>other<br/>Curated design</p>
+            <p className={styles.badgeText}>Available in<br />other<br />Curated design</p>
           </div>
         </div>
 
         <div className={styles.fullWidthDivider}></div>
-        
+
         <Footer />
       </section>
     </main>
