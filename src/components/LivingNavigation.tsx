@@ -78,7 +78,7 @@ export default function LivingNavigation() {
           <Link href="/living" className={styles.logoGroup}>
             {/* <div className={styles.logo}>SORA</div>
             <span className={styles.livingText}>Living</span> */}
-            <Image src="/sora_living_logo.png" alt="Sora_living" width={100} height={100} />
+            <Image src="/Sora-Living-PNG-Light.png" alt="Sora_living" width={100} height={100} />
           </Link>
 
           <button

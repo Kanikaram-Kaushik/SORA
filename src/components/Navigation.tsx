@@ -90,7 +90,7 @@ export default function Navigation() {
       <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
         <div className={styles.headerInner}>
           <div className={styles.logo}>
-            <Link href="/"><Image src="/sora_logo.png" alt="Sora" width={100} height={100} /></Link>
+            <Link href="/"><Image src="/Sora-Objects-PNG-Light.png" alt="Sora" width={125} height={125} /></Link>
           </div>
           <button 
             className={`${styles.hamburger} ${isOpen ? styles.open : ''}`} 

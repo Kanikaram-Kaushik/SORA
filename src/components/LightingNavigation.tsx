@@ -57,10 +57,10 @@ export default function LightingNavigation() {
     <>
       <header className={`${styles.header} ${showNav ? styles.headerVisible : styles.headerHidden}`}>
         <div className={styles.headerInner}>
-          <Link href="/living" className={styles.logoGroup}>
+          <Link href="/lighting" className={styles.logoGroup}>
             {/* <div className={styles.logo}>SORA</div>
             <span className={styles.livingText}>Living</span> */}
-            <Image src="/sora_lighting_logo.png" alt="Sora_lighting" width={200} height={200} />
+            <Image src="/Sora-Lighting-PNG-Light.png" alt="Sora_lighting" width={200} height={200} />
 
           </Link>
 
