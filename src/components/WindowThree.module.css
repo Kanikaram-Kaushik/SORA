@@ -81,7 +81,7 @@
 }
 
 .cardDesc {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 17px;
   color: #D9D3CC;
   line-height: 1.4;

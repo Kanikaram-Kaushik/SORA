@@ -79,7 +79,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: var(--font-poppins), var(--font-heading);
+  font-family: var(--font-heading);
   font-size: clamp(3rem, 12vw, 6rem);
   font-weight: 700;
   color: rgba(255, 255, 255, 0.15);
@@ -99,7 +99,7 @@
 }
 
 .studio h3 {
-  font-family: var(--font-poppins), var(--font-heading);
+  font-family: var(--font-heading);
   font-weight: 400;
   font-size: 38px;
   line-height: 1.1;
@@ -108,7 +108,7 @@
 }
 
 .studio p {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 15px;
   color: #302d2b;

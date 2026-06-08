@@ -18,10 +18,10 @@
      ============================================= */
 
   /* Body text — paragraphs, descriptions, general text */
-  --font-body: var(--font-outfit), sans-serif;
+  --font-body: var(--font-murecho), sans-serif;
 
   /* Page headings — h1, h2, h3, etc. */
-  --font-heading: var(--font-poppins, var(--font-playfair)), serif;
+  --font-heading: var(--font-poppins), serif;
 
   /* Logo — "SORA" text in navbar */
   --font-logo: var(--font-albert), sans-serif;
@@ -33,7 +33,7 @@
   --font-nav-secondary: var(--font-albert), sans-serif;
 
   /* Footer text */
-  --font-footer: var(--font-outfit), sans-serif;
+  --font-footer: var(--font-murecho), sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

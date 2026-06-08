@@ -148,8 +148,9 @@
   padding: 18px 0;
   border-bottom: 1px solid var(--border);
   font-family: var(--font-nav-primary);
-  font-size: 1.45rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
   color: var(--foreground);
 }
 
@@ -162,8 +163,10 @@
 
 .secondaryLink {
   font-family: var(--font-nav-secondary);
-  font-size: 1.8rem;
-  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: #302d2b;
 }
 
 @media (min-width: 768px) {
