@@ -4,12 +4,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './FeaturedCarousel.module.css';
 
+import Link from 'next/link';
+
 const featuredData = [
   {
     id: 1,
     title: "Smart Bar",
     subtitle: "Living Collection",
     imageUrl: "/EFC6F478-DF0B-467B-8A69-85E2B776ADAF.png",
+    linkUrl: "/living/bar-counter"
   },
   {
     id: 4,
@@ -51,21 +54,35 @@ export default function FeaturedCarousel() {
         ref={containerRef}
         onScroll={handleScroll}
       >
-        {featuredData.map((item, i) => (
-          <div key={item.id} className={styles.featuredCard}>
-            <div className={styles.featuredImageWrapper}>
-              {item.imageUrl ? (
-                <Image src={item.imageUrl} alt={item.title} fill className={styles.productImage} />
+        {featuredData.map((item, i) => {
+          const content = (
+            <>
+              <div className={styles.featuredImageWrapper}>
+                {item.imageUrl ? (
+                  <Image src={item.imageUrl} alt={item.title} fill className={styles.productImage} />
+                ) : (
+                  <div className={styles.imagePlaceholder}></div>
+                )}
+              </div>
+              <div className={styles.productInfo}>
+                <h3 className={styles.productTitle}>{item.title}</h3>
+                {item.subtitle && <p className={styles.productSubtitle}>{item.subtitle}</p>}
+              </div>
+            </>
+          );
+
+          return (
+            <div key={item.id} className={styles.featuredCard}>
+              {item.linkUrl ? (
+                <Link href={item.linkUrl} style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', height: '100%' }}>
+                  {content}
+                </Link>
               ) : (
-                <div className={styles.imagePlaceholder}></div>
+                content
               )}
             </div>
-            <div className={styles.productInfo}>
-              <h3 className={styles.productTitle}>{item.title}</h3>
-              {item.subtitle && <p className={styles.productSubtitle}>{item.subtitle}</p>}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <div className={styles.paginationDots}>
         {featuredData.map((_, i) => (

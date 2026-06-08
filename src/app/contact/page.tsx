@@ -29,21 +29,10 @@ export default function ContactPage() {
           <div className={styles.contactIcon}>📱</div>
           <div className={styles.contactContent}>
             <p className={styles.contactLabel}>Mobile Number</p>
-            <a href="tel:+919876543210" className={styles.contactLink}>
-              +91 98765 43210
+            <a href="tel:+916302673987" className={styles.contactLink}>
+              +91 6302 673987
             </a>
             <p className={styles.contactNote}>(Tap to call or text)</p>
-          </div>
-        </div>
-
-        {/* Email */}
-        <div className={styles.contactItem}>
-          <div className={styles.contactIcon}>✉️</div>
-          <div className={styles.contactContent}>
-            <p className={styles.contactLabel}>Email</p>
-            <a href="mailto:hello@sorastudio.com" className={styles.contactLink}>
-              hello@sorastudio.com
-            </a>
           </div>
         </div>
       </section>
@@ -58,11 +47,12 @@ export default function ContactPage() {
         <div className={styles.addressGrid}>
           {/* Design Studio */}
           <div className={styles.addressBlock}>
-            <h3 className={styles.addressHeading}>Design Studio / Coffee Office</h3>
+            <h3 className={styles.addressHeading}>Design Studio / Sales</h3>
             <p className={styles.addressText}>
-              1/2/3, ABC Street<br />
-              Habargula, Hyderabad<br />
-              500089
+              VeeraReddy colony,<br />
+              Nacharam,<br />
+              Hyderabad.<br />
+              Pin: 500076
             </p>
           </div>
 
@@ -70,9 +60,10 @@ export default function ContactPage() {
           <div className={styles.addressBlock}>
             <h3 className={styles.addressHeading}>Workshop</h3>
             <p className={styles.addressText}>
-              1/2/3, ABC Street<br />
-              Habargula, Hyderabad<br />
-              500089
+              Uppal Bagayath,<br />
+              Uppal,<br />
+              Hyderabad.<br />
+              Pin: 500039
             </p>
           </div>
         </div>
