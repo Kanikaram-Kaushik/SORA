@@ -59,7 +59,7 @@
 }
 
 .oliveBlock p {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.5;
   color: #fff;
@@ -227,7 +227,7 @@
 }
 
 .conceptDesc {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.5;
   color: #000;
@@ -279,7 +279,7 @@
 }
 
 .pillarsFooterText {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 12px;
   line-height: 1.5;
   color: #4a423a;
@@ -334,7 +334,7 @@
 }
 
 .detailsTextBlock p {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.6;
   color: #000;
@@ -356,7 +356,7 @@
 }
 
 .specItem h3 {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
   color: #000;
@@ -398,7 +398,7 @@
 }
 
 .dimLabel {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
   margin: 0;
@@ -444,7 +444,7 @@
 }
 
 .featureCol p {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 12px;
   color: #000;
   margin: 0;

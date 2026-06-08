@@ -1,5 +1,5 @@
 .section {
-  background-color: #7e7b7a;
+  background-color: #BEB8B1;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -19,12 +19,12 @@
 
 .cardLighting {
   aspect-ratio: 1 / 1;
-  background-color: #574242;
+  background-color: #3E2D2D;
 }
 
 .cardLiving {
   aspect-ratio: 1 / 1;
-  background-color: #4A4E69;
+  background-color: #44506B;
 }
 
 /* Faint watermarks */
@@ -83,7 +83,7 @@
 .cardDesc {
   font-family: var(--font-murecho), var(--font-body);
   font-size: 17px;
-  color: #90908d;
+  color: #D9D3CC;
   line-height: 1.4;
   margin: 0;
 }

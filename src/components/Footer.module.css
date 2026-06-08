@@ -39,7 +39,7 @@
 }
 
 .addressText {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   color: #000;
@@ -59,7 +59,7 @@
 }
 
 .navLink {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 20px;
   color: #000;
   text-decoration: none;
@@ -77,7 +77,7 @@
 }
 
 .socialTitle {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 25px;
   color: #000;
   margin: 0;
@@ -110,7 +110,7 @@
 }
 
 .iconLabel {
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
@@ -133,7 +133,7 @@
 .bottomLocations {
   display: flex;
   justify-content: space-between;
-  font-family: var(--font-murecho), var(--font-body);
+  font-family: var(--font-body);
   font-size: 15px;
   color: #000;
   font-weight: 400;

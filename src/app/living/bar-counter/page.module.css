@@ -25,15 +25,13 @@
 
 .windowTwo,
 .windowThree {
-  height: 100dvh;
+  min-height: 100dvh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   scroll-snap-align: start;
-  overflow-y: auto;
   position: relative;
-  -webkit-overflow-scrolling: touch;
 }
 
 .heroImageContainer {
@@ -62,42 +60,43 @@
 .heroHeader {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 4px;
+  gap: 16px;
+  margin-bottom: 8px;
 }
 
 .smallTitle {
-  font-family: var(--font-murecho), var(--font-body);
-  color: #8c8279;
-  font-size: 22px;
-  text-transform: lowercase;
-  font-weight: 400;
-  letter-spacing: 0.5px;
+  font-family: var(--font-body);
+  color: #6d635a;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .line {
   flex-grow: 1;
   height: 1px;
-  background-color: #8c8279;
-  opacity: 0.6;
+  background-color: #6d635a;
+  opacity: 0.4;
 }
 
 .title {
-  font-family: var(--font-murecho), var(--font-heading);
-  font-size: 26px;
-  font-weight: 400;
-  margin: 0 0 12px 0;
-  color: #8c8279;
-  letter-spacing: 0.5px;
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 300;
+  margin: 0 0 16px 0;
+  color: #2c2825;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
 }
 
 .lead {
   font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
   color: #4a423a;
-  max-width: 80%;
-  line-height: 1.5;
+  max-width: 85%;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -109,11 +108,11 @@
 
 .textSection p {
   font-family: var(--font-body);
-  font-size: 11px;
-  color: #5c534c;
+  font-size: 15px;
+  color: #4a423a;
   line-height: 1.6;
   margin: 0 0 16px 0;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .textSection p:last-child {
@@ -159,9 +158,9 @@
 
 .detailsTitle {
   font-family: var(--font-heading);
-  font-size: 16px;
-  font-weight: 500;
-  color: #9c9085;
+  font-size: 24px;
+  font-weight: 400;
+  color: #4a423a;
   margin: 0;
 }
 
@@ -169,7 +168,7 @@
   margin: 0;
   padding: 0 0 0 16px;
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 15px;
   color: #4a423a;
   line-height: 1.6;
   list-style-type: disc;
@@ -219,8 +218,8 @@
 
 .dimensionsText p {
   font-family: var(--font-body);
-  font-size: 11px;
-  color: #5c534c;
+  font-size: 15px;
+  color: #4a423a;
   line-height: 1.6;
   margin: 0;
 }
@@ -253,9 +252,9 @@
 
 .badgeText {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   color: #4a423a;
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0;
   font-weight: 500;
 }
